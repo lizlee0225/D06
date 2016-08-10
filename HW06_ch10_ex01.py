@@ -5,3 +5,20 @@
 # In your final submission: 
 #  - Do not print anything extraneous!
 #  - Do not put anything but pass in main()
+
+
+def nested_sum(list_input):
+	total = 0
+	for item in list_input:
+		if type(item) != int:
+			total += sum(item)
+		else:	
+			total += item
+	return total
+
+
+def main():
+	pass
+
+if __name__ == '__main__':
+    main()

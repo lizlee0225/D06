@@ -14,10 +14,16 @@
 #       2:
 #       3:
 ##############################################################################
-# Imports
+import random
 
-# Body
+def uses_only(word, letters):
+	for letter in word:
+		if letter not in letters:
+			return False
+	return True		#returns True if the word contains only letters in letters
 
+def make_sentence():
+	
 
 ##############################################################################
 def main():

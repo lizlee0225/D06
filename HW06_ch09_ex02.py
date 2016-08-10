@@ -11,14 +11,31 @@
 #   - print each approved word on new line, followed at the end by the %
 #   - name your function print_no_e
 ##############################################################################
-# Imports
+import os
 
-# Body
+def has_no_e(word):
+	if 'e' in word:
+		return False
+	else:
+		return True
 
+def print_no_e():
+	fin = open('words.txt', 'r')
+	count = 0
+	total = 0
+	for line in fin:
+		txt_word = line.strip()
+		total += 1
+		if 'e' not in txt_word:
+			print(txt_word)
+			count += 1
+	no_e = int(count/total*100)
+	print("{}%".format(no_e))
 
 ##############################################################################
 def main():
-    pass  # Call your function(s) here.
+	print(has_no_e('Liz'))
+	print_no_e()
 
 if __name__ == '__main__':
-    main()
+	main()
